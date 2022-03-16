@@ -1,0 +1,26 @@
+{
+  "name": "web_components_lit2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "lit": "^2.2.1"
+  },
+  "packageManager": "yarn@3.2.0",
+  "devDependencies": {
+    "@babel/core": "^7.17.7",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.5.0-alpha.48",
+    "@storybook/addon-docs": "^6.5.0-alpha.48",
+    "@storybook/addon-essentials": "^6.5.0-alpha.48",
+    "@storybook/addon-links": "^6.5.0-alpha.48",
+    "@storybook/web-components": "^6.5.0-alpha.48",
+    "babel-loader": "^8.2.3",
+    "lit-html": "^2.2.1",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}
