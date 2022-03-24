@@ -1,13 +1,15 @@
-import { Story, Meta } from '@storybook/web-components';
-import { Button, ButtonProps } from './Button';
+import './Button.element';
+
+import { Meta, Story } from '@storybook/web-components';
+import { html } from 'lit';
 
 // More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
   title: 'Example/Button',
+  component: 'my-button',
   // More on argTypes: https://storybook.js.org/docs/web-components/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
-    onClick: { action: 'onClick' },
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
@@ -16,12 +18,12 @@ export default {
 } as Meta;
 
 // More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
-const Template: Story<Partial<ButtonProps>> = (args) => Button(args);
+const Template: Story = (args) => html`
+  <my-button .backgroundColor=${args.backgroundColor} .size=${args.size}>${args.label}</my-button>`;
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/web-components/writing-stories/args
 Primary.args = {
-  primary: true,
   label: 'Button',
 };
 

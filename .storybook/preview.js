@@ -1,3 +1,7 @@
+import { setCustomElements } from '@storybook/web-components';
+
+import customElements from '../custom-elements.json';
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -7,3 +11,5 @@ export const parameters = {
     },
   },
 }
+
+setCustomElements(customElements);

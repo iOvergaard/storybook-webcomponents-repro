@@ -17,10 +17,12 @@
     "@storybook/web-components": "^6.5.0-alpha.48",
     "babel-loader": "^8.2.3",
     "lit-html": "^2.2.1",
-    "typescript": "latest"
+    "typescript": "latest",
+    "web-component-analyzer": "^1.1.6"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "analyze": "wca **/*.element.ts --outFile custom-elements.json",
+    "storybook": "npm run analyze && start-storybook -p 6006",
     "build-storybook": "build-storybook"
   }
 }
