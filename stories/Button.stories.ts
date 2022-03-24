@@ -24,7 +24,7 @@ const Template: Story = (args) => html`
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/web-components/writing-stories/args
 Primary.args = {
-  label: 'Button',
+  label: 'primary arg for label PROPERTY not SLOT',
 };
 
 export const Secondary = Template.bind({});
